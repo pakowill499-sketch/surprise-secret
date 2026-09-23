@@ -477,10 +477,8 @@ section.revealed .photo:nth-child(3) {
     width: 420px;
     max-width: 90vw;
     height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    display: block;
+    margin: 0 auto;
 }
 
 .btn {
@@ -495,6 +493,9 @@ section.revealed .photo:nth-child(3) {
 .yes {
     background: white;
     color: black;
+    position: absolute;
+    left: 0;
+    top: 35px;
 }
 
 .yes:hover {
@@ -505,7 +506,9 @@ section.revealed .photo:nth-child(3) {
     background: transparent;
     color: white;
     border: 1px solid #555;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 35px;
 }
 
 /* =========================
