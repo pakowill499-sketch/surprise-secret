@@ -751,15 +751,15 @@ footer {
             <div class="music-buttons">
 
                 <button onclick="previousSong()">
-                    Back
+                    &larr;
                 </button>
 
                 <button onclick="toggleMusic()" id="playButton">
-                    Play
+                    &#9654; Play
                 </button>
 
                 <button onclick="nextSong()">
-                    Next
+                    &rarr;
                 </button>
 
             </div>
@@ -767,7 +767,7 @@ footer {
             <div class="playlist">
 
                 <div onclick="playSong(0)">
-                    Snooze - SZA
+                    Snooze â€” SZA
                 </div>
 
                 <div onclick="playSong(1)">
@@ -1076,7 +1076,7 @@ setInterval(updateCountdown, 1000);
 const songs = [
 
     {
-        name: "Snooze - SZA",
+        name: "Snooze â€” SZA",
         file: "snooze.mp3"
     },
 
@@ -1096,7 +1096,7 @@ const playButton = document.getElementById("playButton");
 function showAudioError(message = "Audio unavailable") {
 
     songName.innerText = message;
-    playButton.innerText = "Play";
+    playButton.innerText = "&#9654; Play";
     audio.pause();
 
 }
@@ -1116,7 +1116,7 @@ function playSong(index) {
 
     audio.play()
         .then(() => {
-            playButton.innerText = "Pause";
+            playButton.innerText = "âšâš Pause";
         })
         .catch((error) => {
             console.warn("Unable to play audio:", error);
@@ -1135,7 +1135,7 @@ function toggleMusic() {
 
         audio.play()
             .then(() => {
-                playButton.innerText = "Pause";
+                playButton.innerText = "âšâš Pause";
             })
             .catch((error) => {
                 console.warn("Unable to resume audio:", error);
@@ -1147,7 +1147,7 @@ function toggleMusic() {
         audio.pause();
 
         playButton.innerText =
-            "Play";
+            "&#9654; Play";
     }
 }
 
