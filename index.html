@@ -767,7 +767,7 @@ footer {
             <div class="playlist">
 
                 <div onclick="playSong(0)">
-                    Snooze &mdash; SZA
+                    Snooze â€” SZA
                 </div>
 
                 <div onclick="playSong(1)">
@@ -1076,7 +1076,7 @@ setInterval(updateCountdown, 1000);
 const songs = [
 
     {
-        name: "Snooze &mdash; SZA",
+        name: "Snooze â€” SZA",
         file: "snooze.mp3"
     },
 
@@ -1116,7 +1116,7 @@ function playSong(index) {
 
     audio.play()
         .then(() => {
-            playButton.innerText = "&#10074;&#10074; Pause";
+            playButton.innerText = "âšâš Pause";
         })
         .catch((error) => {
             console.warn("Unable to play audio:", error);
@@ -1135,7 +1135,7 @@ function toggleMusic() {
 
         audio.play()
             .then(() => {
-                playButton.innerText = "&#10074;&#10074; Pause";
+                playButton.innerText = "âšâš Pause";
             })
             .catch((error) => {
                 console.warn("Unable to resume audio:", error);
