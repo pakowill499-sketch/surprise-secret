@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>One Question For You ❤️</title>
+<title>One Question For You â¤ï¸</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
@@ -418,8 +418,6 @@ section.revealed .photo:nth-child(3) {
 }
 
 .music-buttons {
-    display: none;
-
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -440,8 +438,6 @@ section.revealed .photo:nth-child(3) {
 }
 
 .playlist {
-    display: none;
-
     margin-top: 25px;
 }
 
@@ -623,7 +619,7 @@ footer {
         <div class="envelope-flap"></div>
 
         <div class="heart-seal">
-            ♡
+            â™¡
         </div>
 
     </div>
@@ -719,15 +715,15 @@ footer {
             <!-- Replace these with your own photos -->
 
             <div class="photo">
-                <img src="images/photo1.jpg" alt="Memory">
+                <img src="photo1.jpg" alt="Memory">
             </div>
 
             <div class="photo">
-                <img src="images/photo2.jpg" alt="Memory">
+                <img src="photo2.jpg" alt="Memory">
             </div>
 
             <div class="photo">
-                <img src="images/photo3.jpg" alt="Memory">
+                <img src="photo3.jpg" alt="Memory">
             </div>
 
         </div>
@@ -750,20 +746,20 @@ footer {
                 Nothing playing
             </div>
 
-            <audio id="audio" preload="auto"></audio>
+            <audio id="audio"></audio>
 
             <div class="music-buttons">
 
                 <button onclick="previousSong()">
-                    ←
+                    â†
                 </button>
 
                 <button onclick="toggleMusic()" id="playButton">
-                    ▶ Play
+                    â–¶ Play
                 </button>
 
                 <button onclick="nextSong()">
-                    →
+                    â†’
                 </button>
 
             </div>
@@ -771,15 +767,11 @@ footer {
             <div class="playlist">
 
                 <div onclick="playSong(0)">
-                    Snooze — SZA
+                    Snooze â€” SZA
                 </div>
 
                 <div onclick="playSong(1)">
                     Promises
-                </div>
-
-                <div onclick="playSong(2)">
-                    Snooze — SZA
                 </div>
 
             </div>
@@ -802,13 +794,13 @@ footer {
         </h2>
 
         <p>
-            Choose wisely 🤍
+            Choose wisely ðŸ¤
         </p>
 
         <div class="buttons">
 
             <button class="btn yes" onclick="sayYes()">
-                YES ♡
+                YES â™¡
             </button>
 
             <button class="btn no" id="noButton">
@@ -821,7 +813,7 @@ footer {
 
 
     <footer>
-        MADE WITH LOVE · 2026
+        MADE WITH LOVE Â· 2026
     </footer>
 
 </main>
@@ -834,7 +826,7 @@ footer {
     <div class="success-content">
 
         <div style="font-size:55px;margin-bottom:20px;">
-            ♡
+            â™¡
         </div>
 
         <h1>
@@ -875,7 +867,6 @@ envelope.addEventListener("click", () => {
         intro.classList.add("hidden");
         main.classList.add("visible");
         revealSections();
-        playSong(0);
 
     }, 1200);
 
@@ -989,7 +980,7 @@ function createHeart() {
 
     heart.className = "heart";
 
-    heart.innerHTML = Math.random() > .5 ? "♡" : "♥";
+    heart.innerHTML = Math.random() > .5 ? "â™¡" : "â™¥";
 
     heart.style.left = Math.random() * 100 + "vw";
 
@@ -1085,18 +1076,13 @@ setInterval(updateCountdown, 1000);
 const songs = [
 
     {
-        name: "Snooze — SZA",
-        file: "music/snooze.mp3"
+        name: "Snooze â€” SZA",
+        file: "snooze.mp3"
     },
 
     {
         name: "Promises",
-        file: "music/promises.mp3"
-    },
-
-    {
-        name: "Snooze — SZA",
-        file: "music/snooze.mp3"
+        file: "promises.mp3"
     }
 
 ];
@@ -1110,7 +1096,7 @@ const playButton = document.getElementById("playButton");
 function showAudioError(message = "Audio unavailable") {
 
     songName.innerText = message;
-    playButton.innerText = "▶ Play";
+    playButton.innerText = "â–¶ Play";
     audio.pause();
 
 }
@@ -1130,7 +1116,7 @@ function playSong(index) {
 
     audio.play()
         .then(() => {
-            playButton.innerText = "❚❚ Pause";
+            playButton.innerText = "âšâš Pause";
         })
         .catch((error) => {
             console.warn("Unable to play audio:", error);
@@ -1149,7 +1135,7 @@ function toggleMusic() {
 
         audio.play()
             .then(() => {
-                playButton.innerText = "❚❚ Pause";
+                playButton.innerText = "âšâš Pause";
             })
             .catch((error) => {
                 console.warn("Unable to resume audio:", error);
@@ -1161,7 +1147,7 @@ function toggleMusic() {
         audio.pause();
 
         playButton.innerText =
-            "▶ Play";
+            "â–¶ Play";
     }
 }
 
@@ -1332,7 +1318,7 @@ function createCelebrationHearts() {
             const heart = document.createElement("div");
 
             heart.className = "heart";
-            heart.innerHTML = Math.random() > .5 ? "♡" : "♥";
+            heart.innerHTML = Math.random() > .5 ? "â™¡" : "â™¥";
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.color = "#fff";
             heart.style.fontSize = (18 + Math.random() * 28) + "px";
